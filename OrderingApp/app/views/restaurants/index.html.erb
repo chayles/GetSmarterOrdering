@@ -1,0 +1,22 @@
+<div> 
+	
+	Add a restaurant:
+	<%= form_for :restaurant, remote: true do |f| %>
+		<%= f.text_field :name, :placeholder => "Name" %>
+		<%= f.text_field :phone, :placeholder => "Phone number" %>
+		<%= f.text_field :address, :placeholder => "Address" %>
+		<%= f.submit %>
+	<% end %>
+
+</div>
+
+<div>
+
+	Restaurants:
+	<ul class="RestaurantList">
+		<%= @restaurants.each do |r| %>
+			<li> <%= link_to "#{r.name}", restaurants_path(r) %> </li>
+		<% end %>
+	</ul>
+
+</div>
