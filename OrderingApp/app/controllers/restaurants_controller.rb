@@ -5,7 +5,18 @@ class RestaurantsController < ApplicationController
 	end
 
 	def create
-		render plain: params[:restaurant].inspect
+		@restaurant = Restaurant.new(restaurant_params)
+		@restuarant.save
+		render 'index'
 	end
+
+    def show
+	    @restaurant = Restaurant.find(restaurant_params[:id])
+  	end
+
+  	private
+	def restaurant_params
+      	params.require(:name, :phone, :address)
+    end
 
 end

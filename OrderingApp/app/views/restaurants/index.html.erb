@@ -1,7 +1,7 @@
 <div> 
 	
 	Add a restaurant:
-	<%= form_for :restaurant, remote: true do |f| %>
+	<%= form_for Restaurant.new do |f| %>
 		<%= f.text_field :name, :placeholder => "Name" %>
 		<%= f.text_field :phone, :placeholder => "Phone number" %>
 		<%= f.text_field :address, :placeholder => "Address" %>
