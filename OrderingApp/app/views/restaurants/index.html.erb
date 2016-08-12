@@ -1,22 +1,12 @@
-<div> 
-	
-	Add a restaurant:
-	<%= form_for :restaurant do |f| %>
-		<%= f.text_field :name, :placeholder => "Name" %>
-		<%= f.text_field :phone, :placeholder => "Phone number" %>
-		<%= f.text_field :address, :placeholder => "Address" %>
-		<%= f.submit %>
-	<% end %>
-
-</div>
-
 <div>
 
 	Restaurants:
 	<ul>
 		<%= @restaurants.each do |r| %>
-			<li> <%= r.name %> </li>
+		<div><%= r %></div>
 		<% end %>
 	</ul>
 
 </div>
+
+<%= link_to 'New restaurant', new_restaurant_path %>

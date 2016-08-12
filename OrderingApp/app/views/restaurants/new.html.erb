@@ -1,0 +1,12 @@
+<h1>Add a new restaurant</h1>
+
+<div> 
+	<%= form_for :restaurant, url: restaurants_path do |f| %>
+		<%= f.text_field :name, :placeholder => "Name" %>
+		<%= f.text_field :phone, :placeholder => "Phone number" %>
+		<%= f.text_field :address, :placeholder => "Address" %>
+		<%= f.submit %>
+	<% end %>
+</div>
+
+<%= link_to 'Restaurants', restaurants_path %>

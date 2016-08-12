@@ -2,6 +2,7 @@ class RestaurantsController < ApplicationController
 
 	def index
 		@restaurants = Restaurant.all
+
 	end
 
 	def new
@@ -11,16 +12,24 @@ class RestaurantsController < ApplicationController
 	def create
 		@restaurant = Restaurant.new
 		if @restaurant.save
-		    render 'index'
+		    redirect_to restaurants_path
 		else
-		    render 'index'
+		    render 'new'
 	    end
 	end
 
-    def show
-	    @restaurant = Restaurant.find(restaurant_params[:id])
-  	end
+  private
 
+	def permitted_params
+	 #  params.require(:restaurant)
+	end
 
+	# def permitted_fields
+	#   [
+	#     :name,
+	#     :phone,
+	#     :address
+	#   ]
+	# end
 
 end
