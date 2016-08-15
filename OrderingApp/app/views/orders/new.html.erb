@@ -2,9 +2,9 @@
  
  <div> 
  	<%= form_for :order, url: orders_path do |o| %>
- 		<%= o.text_field :name, :placeholder => "Name" %>
- 		<%= o.text_field :item, :placeholder => "Item" %>
- 		<%= o.text_field :cost, :placeholder => "Cost" %>
+ 		Name: <%= o.text_field :name %>
+ 		Item: <%= o.text_field :item %>
+ 		Cost: <%= o.text_field :cost %>
  		<%= o.submit %>
  	<% end %>
  </div>
