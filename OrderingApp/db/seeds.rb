@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 restaurants = Restaurant.create([{name: 'Name', phone:'123', address: '123 asdf'}])
+orders = Order.create([{name: 'Name', item: 'asdf', cost: '123'}, { name: 'Name', item:'toast', cost: '123'}])

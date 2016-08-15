@@ -1,9 +1,8 @@
 <div>
-	Create your order:
-		<%= form_for Order.new do |f| %>
-			<%= f.text_field :name, :placeholder => "Name" %>
-			<%= f.text_field :item, :placeholder => "Item" %>
-			<%= f.number_field :cost, :placeholder => "Cost" %>
-			<%= f.submit %>
+	Your orders:
+		<%= @orders.each do |o| %>
+			<%= o %>
 		<% end %>
 </div>
+
+<p><%= link_to 'New Order', new_order_path%>

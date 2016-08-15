@@ -1,0 +1,12 @@
+<h1>Add a new order</h1>
+ 
+ <div> 
+ 	<%= form_for :order, url: orders_path do |o| %>
+ 		<%= o.text_field :name, :placeholder => "Name" %>
+ 		<%= o.text_field :item, :placeholder => "Item" %>
+ 		<%= o.text_field :cost, :placeholder => "Cost" %>
+ 		<%= o.submit %>
+ 	<% end %>
+ </div>
+ 
+ <%= link_to 'Orders', orders_path %> 
