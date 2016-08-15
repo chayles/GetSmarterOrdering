@@ -3,7 +3,10 @@
 	Restaurants:
 	<ul>
 		<%= @restaurants.each do |r| %>
-		<div><%= r %></div>
+		<div>
+			<%= r.id %>
+			<%= link_to 'Edit', edit_restaurant_path(r)%>
+		</div>
 		<% end %>
 	</ul>
 
