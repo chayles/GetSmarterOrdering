@@ -15,7 +15,6 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
-    @menu_item = Menu_item.new
   end
 
   # GET /orders/1/edit
